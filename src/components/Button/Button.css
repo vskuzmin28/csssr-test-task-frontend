@@ -1,0 +1,22 @@
+/* button : BEGIN */
+.button_disabled {
+  background: #B3D6FF;
+  cursor: pointer;
+}
+
+.button {
+  border: 0;
+  background: #0076FF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background: #FF5252;
+}
+/* button : END */

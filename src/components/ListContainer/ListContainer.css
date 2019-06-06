@@ -1,0 +1,42 @@
+.list-result {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list-result__item {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  padding-bottom: 4px;
+}
+
+.list-result__link {
+  display: flex;
+  flex-direction: row;
+  color: #000;
+  text-decoration: none;
+}
+
+.list-result__link:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.list-result__avatar {
+  margin-right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.list-result__content {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 16px;
+}
+
+.list-result__date {
+  display: block;
+  font-weight: bold;
+}

@@ -1,0 +1,17 @@
+{
+	"env": {
+		"browser": true
+	},
+    "extends": ["airbnb", "prettier"],
+    "plugins": [
+        "prettier"
+    ],
+    "rules": {
+        "prettier/prettier": [
+            "error"
+        ],
+        "semi": "off",
+        "jsx-a11y/href-no-hash": "off",
+        "react/jsx-filename-extension": "off"
+    }
+}

@@ -1,0 +1,28 @@
+.css-vj8t7z {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #4A4A4A;
+  border: 0 !important;
+  border-radius: 0 !important;
+  padding-bottom: 0px;
+  border-bottom: 1px solid #E1E1E1 !important;
+}
+
+.css-2o5izw {
+  border: 0 !important;
+  box-shadow: none !important;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  color: #4A4A4A;
+  border-radius: 0 !important;
+  border-bottom: 1px solid #0076FF !important;
+}
+
+.css-vj8t7z:hover,
+.css-vj8t7z:focus {
+  border-color: #0076FF !important;
+}
+
+.css-1hwfws3 {
+  padding: 0 !important;
+}
