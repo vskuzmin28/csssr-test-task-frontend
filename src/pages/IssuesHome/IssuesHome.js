@@ -166,7 +166,7 @@ class IssuesHome extends Component {
 
             <div className='card__number-of-results'>
               <p className='card__number-of-results__title'>Количество результатов:</p>
-              <Select className='card__number-of-results__select' from={5} to={10} onChange={v => this.handlePagesizeChange(v)} />
+              <Select className='card__number-of-results__select' from={1} to={5} onChange={v => this.handlePagesizeChange(v)} />
             </div>
 
             <Button className='button card__button' text="Поехали" onButtonHit={this.handleSearchButtonHit} />

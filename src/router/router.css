@@ -175,7 +175,6 @@ html, body, #root {
 }
 
 .pagination__button {
-  border-radius: 4px;
   width: 24px;
   height: 24px;
 }
@@ -208,4 +207,11 @@ html, body, #root {
 .detail-block__desc p {
   margin: 0;
   padding: 0;
+}
+
+.error, .loading {
+  margin: 20px 0;
+  color: #f00;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Error = ({ message }) => (
-  <div>
-    Error:
+  <div className='error'>
+    Ошибочка: 
     {message}
   </div>
 );
