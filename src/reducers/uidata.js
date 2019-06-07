@@ -5,7 +5,8 @@ const initState = {
   repoName: 'csssr-project-template',
   repoUser: 'CSSSR',
   isLoading: false,
-  errMessage: ''
+  errMessage: '',
+  isSearchPerformed: false,
 };
 
 const uiDataReducer = (state = initState, action) => {
@@ -36,7 +37,8 @@ const uiDataReducer = (state = initState, action) => {
       return {
         ...state,
         errMessage: '',
-        isLoading: true
+        isLoading: true,
+        isSearchPerformed: true,
       };
 
     case CommonActions.LOADING_DONE:

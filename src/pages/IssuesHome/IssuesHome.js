@@ -32,10 +32,10 @@ class IssuesHome extends Component {
   };
 
   handlePagesizeChange = pageSize => {
-    const { handlePagesizeChange } = this.props;
+    const { handlePagesizeChange, isSearchPerformed } = this.props;
 
     handlePagesizeChange(pageSize);
-    this.handleSearchButtonHit();
+    isSearchPerformed && this.handleSearchButtonHit();
   };
 
   handlePageChange = direction => {
@@ -87,7 +87,7 @@ class IssuesHome extends Component {
     const { issues, page } = this.props;
 
     if (!issues[page]) return null;
-    else if (!issues[page].length) return <Error message="No more results!" />;
+    else if (!issues[page].length) return <Error message="Нет результатов!" />;
     else
       return (
         <ListContainer>
@@ -106,8 +106,14 @@ class IssuesHome extends Component {
       );
   };
 
+  renderCosmo = () =>
+    !this.props.isSearchPerformed && <Cosmonaut className='cosmonaut result__cosmonaut' />
+
+
   renderPagination = () => {
-    const { page, issues } = this.props;
+    const { page, issues, isSearchPerformed } = this.props;
+
+    if (!isSearchPerformed) return null;
 
     const isBtnDisabled = index => !issues[index] || !issues[index].length;
 
@@ -166,7 +172,7 @@ class IssuesHome extends Component {
 
             <div className='card__number-of-results'>
               <p className='card__number-of-results__title'>Количество результатов:</p>
-              <Select className='card__number-of-results__select' from={1} to={5} onChange={v => this.handlePagesizeChange(v)} />
+              <Select className='card__number-of-results__select' from={6} to={10} onChange={v => this.handlePagesizeChange(v)} />
             </div>
 
             <Button className='button card__button' text="Поехали" onButtonHit={this.handleSearchButtonHit} />
@@ -176,7 +182,7 @@ class IssuesHome extends Component {
 
         <div className='result main__result'>
           <h3 className='result__title'>Карточка результатов</h3>
-          <Cosmonaut className='cosmonaut result__cosmonaut' />
+          {this.renderCosmo()}
           {this.renderIssues()}
           {this.renderPagination()}
           {this.renderRequestStatus()}
@@ -191,6 +197,7 @@ const mapStateToProps = state => ({
   repoName: state.UIData.repoName,
   repoUser: state.UIData.repoUser,
   isLoading: state.UIData.isLoading,
+  isSearchPerformed: state.UIData.isSearchPerformed,
   error: state.UIData.errMessage,
   issues: state.issues.issues,
   page: state.issues.page,
